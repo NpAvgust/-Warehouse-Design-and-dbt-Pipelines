@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_fact_sales
+    description: "Final fact table with one row per order line"
+    columns:
+      - name: sale_id
+        description: "Unique order identifier"
+        tests:
+          - unique
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
